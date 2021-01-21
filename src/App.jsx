@@ -1,6 +1,7 @@
 /* eslint react-hooks/exhaustive-deps: off */
 import React, { useEffect, useState } from "react";
-import ColofulMessage from "./components/ColofulMessage";
+// import ColofulMessage from "./components/ColofulMessage";
+import { ColofulMessage } from "./components/ColofulMessage";
 
 const App = () => {
   console.log("最初");
