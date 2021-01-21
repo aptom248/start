@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import ColofulMessage from "./components/ColofulMessage";
 
 const App = () => {
-  const onClickButton = () => alert();
-  const contentStyle = {
-    color: "blue",
-    fontSize: "18px"
+  const onClickCountup = () => {
+    setNum(num + 1);
   };
+  const [num, setNum] = useState(0);
   return (
     <>
-      <h1 style={{ color: "red" }}>こんにちは</h1>
-      <p style={contentStyle}>お元気ですか</p>
-      <button onClick={onClickButton}>ボタン</button>
+      <h1 style={{ color: "red" }}>こんにちは!</h1>
+      <ColofulMessage color="blue">お元気ですか？</ColofulMessage>
+      <ColofulMessage color="pink">お元気です!</ColofulMessage>
+      <button onClick={onClickCountup}>カウントアップ</button>
+      <p>{num}</p>
     </>
   );
 };
